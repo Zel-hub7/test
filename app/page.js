@@ -1,14 +1,22 @@
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-400 via-yellow-400 to-blue-500">
+    <div className="flex flex-col items-center justify-center min-h-screen">
       {/* Logo Section */}
       <div className="mb-4 mt-7 text-center">
         <img
           src="https://rippleeffectfree.com/wp-content/uploads/2024/04/logo-bg-remove-extra.png"
           alt="Logo"
-          className="w-24 h-auto mx-auto mb-2"  // Adjusted logo size
+          className="w-24 h-auto mx-auto mb-2"
         />
-        <h2 className="text-white text-3xl font-semibold">Create your FREE account NOW!!</h2>
+        <h2 className="text-white text-3xl font-semibold">
+          Create your FREE account NOW!!
+        </h2>
+        <p className="text-lg text-gray-300 mb-4 text-center">
+          Create Your Account Below and Get{" "}
+          <span className=" text-orange-200">Free Access</span> to my
+          Sales System that allows you to attract, capture and generate leads on
+          autopilot.
+        </p>
       </div>
 
       {/* Video Section */}
@@ -25,11 +33,14 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-6 text-center text-white">
           Register Now
         </h2>
-        
+
         <div className="grid grid-cols-2 gap-4 mb-4">
           {/* Username */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-1" htmlFor="username">
+            <label
+              className="block text-white text-sm font-bold mb-1"
+              htmlFor="username"
+            >
               Username
             </label>
             <input
@@ -41,7 +52,10 @@ export default function Home() {
 
           {/* First Name */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-1" htmlFor="firstName">
+            <label
+              className="block text-white text-sm font-bold mb-1"
+              htmlFor="firstName"
+            >
               First Name
             </label>
             <input
@@ -53,7 +67,10 @@ export default function Home() {
 
           {/* Last Name */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-1" htmlFor="lastName">
+            <label
+              className="block text-white text-sm font-bold mb-1"
+              htmlFor="lastName"
+            >
               Last Name
             </label>
             <input
@@ -65,7 +82,10 @@ export default function Home() {
 
           {/* Email */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-1" htmlFor="email">
+            <label
+              className="block text-white text-sm font-bold mb-1"
+              htmlFor="email"
+            >
               Email
             </label>
             <input
@@ -77,7 +97,10 @@ export default function Home() {
 
           {/* Password */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-1" htmlFor="password">
+            <label
+              className="block text-white text-sm font-bold mb-1"
+              htmlFor="password"
+            >
               Password
             </label>
             <input
@@ -89,7 +112,10 @@ export default function Home() {
 
           {/* Confirmation Password */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-1" htmlFor="confirmPassword">
+            <label
+              className="block text-white text-sm font-bold mb-1"
+              htmlFor="confirmPassword"
+            >
               Confirm Password
             </label>
             <input
