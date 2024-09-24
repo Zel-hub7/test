@@ -1,52 +1,11 @@
 import Link from "next/link";
+import Navbar from "../components/navBar";
 
 export default function IntroPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <nav className="absolute right-4 top-4">
-        <ul className="flex mt-6 space-x-4">
-          <li>
-            <a href="#" className="text-white hover:text-blue-200">
-              Step 1
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white hover:text-blue-200">
-              Step 2
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white hover:text-blue-200">
-              Step 3
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white hover:text-blue-200">
-              Trainings
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white hover:text-blue-200">
-              Funnels
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white hover:text-blue-200">
-              Members
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white hover:text-blue-200">
-              Leaderboard
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white hover:text-blue-200">
-              Account
-            </a>
-          </li>
-        </ul>
-      </nav>
+    
+      <Navbar />
 
       {/* Logo Section */}
       <div className="mb-9 mt-0 text-center">
@@ -75,6 +34,8 @@ export default function IntroPage() {
       <p className="text-lg text-white text-center max-w-2xl mb-8">
         Once You have watched the video above click the button below
       </p>
+
+      {/* Next Button */}
       <Link href="/step2">
         <button className="w-[150%] bg-gradient-to-r from-blue-900 via-blue-400 via-gray-600 to-gray-900 text-white font-bold py-2 px-4 rounded-full hover:scale-105 transform transition-all">
           Next

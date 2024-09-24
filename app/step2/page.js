@@ -1,6 +1,9 @@
+import Navbar from "../components/navBar";
+
 export default function Step2() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
+      <Navbar />
       {/* Logo Section */}
       <div className="mb-4 mt-7 text-center">
         <img
