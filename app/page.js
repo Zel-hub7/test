@@ -1,6 +1,16 @@
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-400 via-yellow-400 to-blue-500">
+      {/* Logo Section */}
+      <div className="mb-4 mt-7 text-center">
+        <img
+          src="https://rippleeffectfree.com/wp-content/uploads/2024/04/logo-bg-remove-extra.png"
+          alt="Logo"
+          className="w-24 h-auto mx-auto mb-2"  // Adjusted logo size
+        />
+        <h2 className="text-white text-3xl font-semibold">Create your FREE account NOW!!</h2>
+      </div>
+
       {/* Video Section */}
       <div className="w-full max-w-2xl mb-8">
         <video
@@ -11,11 +21,11 @@ export default function Home() {
       </div>
 
       {/* Form Section */}
-      <form className="w-full max-w-lg p-8 rounded-lg shadow-lg bg-opacity-0 bg-transparent">
+      <form className="w-full max-w-lg p-8 rounded-lg bg-opacity-0 bg-transparent">
         <h2 className="text-2xl font-semibold mb-6 text-center text-white">
           Register Now
         </h2>
-
+        
         <div className="grid grid-cols-2 gap-4 mb-4">
           {/* Username */}
           <div className="col-span-2 sm:col-span-1">
@@ -25,7 +35,7 @@ export default function Home() {
             <input
               type="text"
               id="username"
-              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
+              className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
 
@@ -37,7 +47,7 @@ export default function Home() {
             <input
               type="text"
               id="firstName"
-              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
+              className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
 
@@ -49,7 +59,7 @@ export default function Home() {
             <input
               type="text"
               id="lastName"
-              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
+              className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
 
@@ -61,7 +71,7 @@ export default function Home() {
             <input
               type="email"
               id="email"
-              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
+              className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
 
@@ -73,7 +83,7 @@ export default function Home() {
             <input
               type="password"
               id="password"
-              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
+              className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
 
@@ -85,7 +95,7 @@ export default function Home() {
             <input
               type="password"
               id="confirmPassword"
-              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
+              className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
         </div>
