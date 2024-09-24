@@ -13,8 +13,8 @@ export default function Home() {
         </h2>
         <p className="text-lg text-gray-300 mb-4 text-center">
           Create Your Account Below and Get{" "}
-          <span className="text-orange-200">Free Access</span> to my
-          Sales System that allows you to attract, capture and generate leads on
+          <span className="text-orange-200">Free Access</span> to my Sales
+          System that allows you to attract, capture and generate leads on
           autopilot.
         </p>
       </div>
@@ -30,8 +30,11 @@ export default function Home() {
 
       {/* Form Section */}
       <form className="w-full max-w-2xl p-8 rounded-lg bg-opacity-0 bg-transparent">
-        <p className="text-1xl font-semibold mb-9 text-center" style={{ color: 'rgba(255, 255, 255, 0.57)' }}>
-            (No previous experience or technical skills required)
+        <p
+          className="text-1xl font-semibold mb-9 text-center"
+          style={{ color: "rgba(255, 255, 255, 0.57)" }}
+        >
+          (No previous experience or technical skills required)
         </p>
 
         <div className="grid grid-cols-2 gap-4 mb-4">
@@ -130,7 +133,7 @@ export default function Home() {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="w-2/3 bg-gradient-to-r from-blue-500 via-blue-300 via-blue-500 to-black text-white font-bold py-2 px-4 rounded-full hover:scale-105 transform transition-all"
+            className="w-[50%] bg-gradient-to-r from-blue-500 via-blue-400 via-blue-500 to-gray-900 text-white font-bold py-2 px-4 rounded-full hover:scale-105 transform transition-all"
           >
             Register Now
           </button>
@@ -144,7 +147,9 @@ export default function Home() {
           alt="Footer Image"
           className="w-32 h-auto mr-4"
         />
-        <p className="text-white text-lg">Join our 20,000+ students worldwide</p>
+        <p className="text-white text-lg">
+          Join our 20,000+ students worldwide
+        </p>
       </div>
     </div>
   );
