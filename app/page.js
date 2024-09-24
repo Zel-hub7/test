@@ -15,94 +15,90 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-6 text-center text-white">
           Register Now
         </h2>
-        
+
         <div className="grid grid-cols-2 gap-4 mb-4">
           {/* Username */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-2" htmlFor="username">
+            <label className="block text-white text-sm font-bold mb-1" htmlFor="username">
               Username
             </label>
             <input
               type="text"
               id="username"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white/20 backdrop-blur-lg"
-              placeholder="Username"
+              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
             />
           </div>
 
           {/* First Name */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-2" htmlFor="firstName">
+            <label className="block text-white text-sm font-bold mb-1" htmlFor="firstName">
               First Name
             </label>
             <input
               type="text"
               id="firstName"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white/20 backdrop-blur-lg"
-              placeholder="First Name"
+              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
             />
           </div>
 
           {/* Last Name */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-2" htmlFor="lastName">
+            <label className="block text-white text-sm font-bold mb-1" htmlFor="lastName">
               Last Name
             </label>
             <input
               type="text"
               id="lastName"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white/20 backdrop-blur-lg"
-              placeholder="Last Name"
+              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
             />
           </div>
 
           {/* Email */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-2" htmlFor="email">
+            <label className="block text-white text-sm font-bold mb-1" htmlFor="email">
               Email
             </label>
             <input
               type="email"
               id="email"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white/20 backdrop-blur-lg"
-              placeholder="Email"
+              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
             />
           </div>
 
           {/* Password */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-2" htmlFor="password">
+            <label className="block text-white text-sm font-bold mb-1" htmlFor="password">
               Password
             </label>
             <input
               type="password"
               id="password"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white/20 backdrop-blur-lg"
-              placeholder="Password"
+              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
             />
           </div>
 
           {/* Confirmation Password */}
           <div className="col-span-2 sm:col-span-1">
-            <label className="block text-white text-sm font-bold mb-2" htmlFor="confirmPassword">
+            <label className="block text-white text-sm font-bold mb-1" htmlFor="confirmPassword">
               Confirm Password
             </label>
             <input
               type="password"
               id="confirmPassword"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white/20 backdrop-blur-lg"
-              placeholder="Confirm Password"
+              className="appearance-none bg-transparent border-b-2 border-white w-full text-white py-2 px-2 leading-tight focus:outline-none focus:border-blue-400"
             />
           </div>
         </div>
 
         {/* Register Button */}
-        <button
-          type="submit"
-          className="bg-gradient-to-r from-blue-400 via-cyan-300 to-sky-900 text-white font-bold py-2 px-4 rounded-full"
-        >
-          Register Now
-        </button>
+        <div className="flex justify-center">
+          <button
+            type="submit"
+            className="w-2/3 bg-gradient-to-r from-blue-500 via-blue-300 via-blue-500 to-black text-white font-bold py-2 px-4 rounded-full hover:scale-105 transform transition-all"
+          >
+            Register Now
+          </button>
+        </div>
       </form>
     </div>
   );
