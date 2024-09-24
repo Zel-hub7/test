@@ -8,7 +8,7 @@ export default function Home() {
           alt="Logo"
           className="w-24 h-auto mx-auto mb-2"
         />
-        <h2 className="text-white text-3xl font-semibold">
+        <h2 className="text-white mb-5 text-3xl font-semibold">
           Create your FREE account NOW!!
         </h2>
         <p className="text-lg text-gray-300 mb-4 text-center">
@@ -19,20 +19,20 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Video Section */}
+      {/* Video Section with Golden Border Shadow */}
       <div className="w-full max-w-4xl mb-8">
         <video
           src="https://storage.googleapis.com/msgsndr/C6nqv5N0ZUkTMUIxNoYx/media/6638c58eb478503bf929064b.mp4"
           controls
-          className="w-[100%] h-auto rounded-lg shadow-lg mx-auto"
+          className="w-full h-auto rounded-lg border-[3px] border-[#F6AD55] shadow-[0_0_15px_rgba(255,215,0,0.8)] hover:shadow-[0_0_30px_rgba(255,215,0,1)] transition-transform transform hover:scale-105 duration-300 ease-in-out"
         />
       </div>
 
       {/* Form Section */}
       <form className="w-full max-w-2xl p-8 rounded-lg bg-opacity-0 bg-transparent">
-        <h2 className="text-2xl font-semibold mb-6 text-center text-white">
-          Register Now
-        </h2>
+        <p className="text-1xl font-semibold mb-9 text-center" style={{ color: 'rgba(255, 255, 255, 0.57)' }}>
+            (No previous experience or technical skills required)
+        </p>
 
         <div className="grid grid-cols-2 gap-4 mb-4">
           {/* Username */}
@@ -136,6 +136,16 @@ export default function Home() {
           </button>
         </div>
       </form>
+
+      {/* Footer Section: Image and Text Side by Side */}
+      <div className="mt-8 flex items-center justify-center">
+        <img
+          src="https://rippleeffectfree.com/wp-content/uploads/2024/04/29cde1a02d3c42b3cea10665efcd9b93_1200_80-removebg-preview-e1713423263170.png"
+          alt="Footer Image"
+          className="w-32 h-auto mr-4"
+        />
+        <p className="text-white text-lg">Join our 20,000+ students worldwide</p>
+      </div>
     </div>
   );
 }
