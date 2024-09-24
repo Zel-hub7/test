@@ -1,5 +1,7 @@
-import Navbar from "../components/navBar";
-
+import Navbar from "../components/Navbar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faPhoneFlip } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 export default function Step2() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
@@ -29,7 +31,7 @@ export default function Step2() {
 
       {/* Description Section */}
       <p className="text-lg text-white text-center max-w-2xl mb-8">
-        Once You have watched the video above click the button below to book
+        Once You have <span className="text-[#EB965F]">watched the video </span> above click the button below to book
         your call
       </p>
 
@@ -39,13 +41,17 @@ export default function Step2() {
       </a>
       <div className="w-full flex max-w-4xl justify-between mt-4 px-4">
         <button className="bg-gradient-to-r from-blue-500 to-gray-900 text-white font-bold py-2 px-4 rounded-full hover:scale-105 transform transition-all">
-          Back
+          &lt; Back
         </button>
-        <button className="bg-gradient-to-r from-blue-500 to-gray-900 text-white font-bold py-2 px-4 rounded-full hover:scale-105 transform transition-all">
-          Book your Call
+
+      <Link href = "/booking">
+        <button className="bg-gradient-to-r from-blue-500 to-gray-900 text-white font-bold py-2 px-4 rounded-full hover:scale-105 transform transition-all flex items-center space-x-1">
+          Book your Call{" "}
+          <FontAwesomeIcon icon={faPhoneFlip} className="w-4  h-4" />
         </button>
+      </Link>
         <button className="bg-gradient-to-r from-blue-500 to-gray-900 text-white font-bold py-2 px-4 rounded-full hover:scale-105 transform transition-all">
-          Next
+          Next &gt;
         </button>
       </div>
     </div>
