@@ -24,9 +24,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-blue-800 via-sky-400 to-red-200`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        {children}
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url('https://rippleeffectfree.com/wp-content/uploads/2024/04/eed6d48cf5f668ec493de6e054b112bd_1200_80.png')] bg-cover bg-center" />
+
+        {/* Overlay with gradient from top left to bottom right */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#162C4E] via-blue-900 to-[#fd7e14] opacity-80" />
+
+
+        <div className="relative z-10">{children}</div>
+        {/* Main content */}
       </body>
     </html>
   );

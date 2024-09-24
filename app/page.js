@@ -13,23 +13,23 @@ export default function Home() {
         </h2>
         <p className="text-lg text-gray-300 mb-4 text-center">
           Create Your Account Below and Get{" "}
-          <span className=" text-orange-200">Free Access</span> to my
+          <span className="text-orange-200">Free Access</span> to my
           Sales System that allows you to attract, capture and generate leads on
           autopilot.
         </p>
       </div>
 
       {/* Video Section */}
-      <div className="w-full max-w-2xl mb-8">
+      <div className="w-full max-w-4xl mb-8">
         <video
           src="https://storage.googleapis.com/msgsndr/C6nqv5N0ZUkTMUIxNoYx/media/6638c58eb478503bf929064b.mp4"
           controls
-          className="w-full h-auto rounded-lg shadow-lg"
+          className="w-[100%] h-auto rounded-lg shadow-lg mx-auto"
         />
       </div>
 
       {/* Form Section */}
-      <form className="w-full max-w-lg p-8 rounded-lg bg-opacity-0 bg-transparent">
+      <form className="w-full max-w-2xl p-8 rounded-lg bg-opacity-0 bg-transparent">
         <h2 className="text-2xl font-semibold mb-6 text-center text-white">
           Register Now
         </h2>
