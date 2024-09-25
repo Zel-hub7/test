@@ -2,13 +2,25 @@
 
 import Navbar from "../components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faDesktop, faDollarSign } from "@fortawesome/free-solid-svg-icons";
+import {
+  faStar,
+  faDesktop,
+  faDollarSign,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function TrainingPage() {
   return (
-    <div className="flex h-screen justify-center px-6 py-10">
+    <div className="flex h-screen flex-col">
       <Navbar />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl w-full mt-12">
+      <div className="flex flex-col items-center mb-9 mt-4 text-center">
+        <img
+          src="https://rippleeffectfree.com/wp-content/uploads/2024/04/logo-bg-remove-extra.png"
+          alt="Logo"
+          className="w-24 h-auto mx-auto mb-5"
+        />
+        <h2 className="text-white text-3xl font-semibold">Trainings</h2>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl w-full mt-12 mx-auto">
         {/* Card 1 */}
         <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between items-center">
           <img
@@ -19,7 +31,10 @@ export default function TrainingPage() {
 
           {/* Wrap icon and text in a flex container */}
           <div className="flex items-center mb-4">
-            <FontAwesomeIcon icon={faStar} className="text-[#030712]-900 mr-2" />
+            <FontAwesomeIcon
+              icon={faStar}
+              className="text-[#030712]-900 mr-2"
+            />
             <h2 className="text-2xl font-semibold">Quick Start</h2>
           </div>
 
@@ -50,10 +65,13 @@ export default function TrainingPage() {
             alt="Training Image"
             className="w-full h-40 object-cover mb-4"
           />
-          
+
           {/* Wrap icon and text in a flex container */}
           <div className="flex items-center mb-4">
-            <FontAwesomeIcon icon={faDesktop} className="text-[#030712]-900 mr-2" />
+            <FontAwesomeIcon
+              icon={faDesktop}
+              className="text-[#030712]-900 mr-2"
+            />
             <h2 className="text-2xl font-semibold">Organic Training</h2>
           </div>
 
@@ -87,7 +105,10 @@ export default function TrainingPage() {
 
           {/* Wrap icon and text in a flex container */}
           <div className="flex items-center mb-4">
-            <FontAwesomeIcon icon={faDollarSign} className="text-[#030712]-900 mr-2" />
+            <FontAwesomeIcon
+              icon={faDollarSign}
+              className="text-[#030712]-900 mr-2"
+            />
             <h2 className="text-2xl font-semibold">Paid Training</h2>
           </div>
 
