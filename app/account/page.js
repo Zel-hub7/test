@@ -1,5 +1,5 @@
 // app/account.js
-"use client"; // Ensure this is included at the top
+"use client"; 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,18 +7,21 @@ import {
   faUserCircle,
   faGlobe,
   faIdCard,
+  faEdit,
+  faInfoCircle,
   faCalendarCheck,
   faStar,
   faImage,
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
-import { mockValues } from "../page"; // Adjust the import path if needed
+import { mockValues } from "../page"; 
 import Navbar from "../components/Navbar";
+
 
 export default function AccountPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-        <Navbar />
+      <Navbar />
       <div className="mb-4 mt-7 text-center">
         <img
           src="https://rippleeffectfree.com/wp-content/uploads/2024/04/logo-bg-remove-extra.png"
@@ -28,8 +31,16 @@ export default function AccountPage() {
         <h2 className="text-white mb-5 text-3xl font-semibold">
           Account
         </h2>
-
       </div>
+
+      {/* Text Information Above the Box */}
+      <div className="mb-4 flex items-center text-left w-full max-w-4xl">
+        <h3 className="text-xl font-bold text-white mr-2">Information</h3>
+        <FontAwesomeIcon icon={faInfoCircle} className="text-white mr-4" />
+        <h3 className="text-xl font-bold text-white mr-2">Edit</h3>
+        <FontAwesomeIcon icon={faEdit} className="text-white" />
+      </div>
+
       <div className="bg-white border border-white bg-opacity-10 p-8 rounded-lg shadow-lg w-full max-w-4xl">
         <div className="grid grid-cols-3 gap-8 mb-8">
           {/* Icons for the first row */}
