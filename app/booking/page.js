@@ -62,16 +62,22 @@ const BookingPage = () => {
             <span className="text-white">GMT+3</span>
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center mb-4">
             <FontAwesomeIcon icon={faBars} className="text-white mr-2" />
             <span className="text-white">
               Schedule a time that works best for you
             </span>
           </div>
+        </div>
+          {/* Move the Select Date and Time text here */}
+          <h1 className="text-white text-xl mt-4 mb-4">Select Date and Time</h1>
 
           {/* Calendar */}
-          <div className="flex items-center ml-2">
-            <button onClick={handlePrevMonth} className="text-white">
+          <div className="flex items-center justify-center ml-2 mb-4">
+            <button
+              onClick={handlePrevMonth}
+              className="text-white bg-[#2F855A] rounded-full p-2 hover:bg-[#388e3c] transition duration-200"
+            >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
             <span className="text-white mx-2">
@@ -80,15 +86,19 @@ const BookingPage = () => {
                 year: "numeric",
               })}
             </span>
-            <button onClick={handleNextMonth} className="text-white">
+            <button
+              onClick={handleNextMonth}
+              className="text-white bg-[#2F855A] rounded-full p-2 hover:bg-[#388e3c] transition duration-200"
+            >
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
           </div>
-          <div className="grid grid-cols-7 gap-2 mt-4">
+
+          <div className="grid grid-cols-7 gap-2">
             {Array.from({ length: daysInMonth }, (_, day) => (
               <div
                 key={day}
-                className="h-10 w-10 flex items-center justify-center rounded-full bg-white text-[#166862] cursor-pointer hover:bg-gray-200"
+                className="h-10 w-10 flex items-center justify-center rounded-full bg-[#2F855A] text-white cursor-pointer hover:bg-[#388e3c] transition duration-200"
                 onClick={() =>
                   console.log(
                     `Selected date: ${day + 1} ${selectedDate.toLocaleString(
@@ -104,7 +114,7 @@ const BookingPage = () => {
           </div>
         </div>
       </div>
-    </div>
+ 
   );
 };
 
