@@ -1,4 +1,60 @@
+"use client"; // Marking the component as a Client Component
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation'; // Updated import for the router
+
 export default function Home() {
+  const router = useRouter();
+
+  // Define mock values for validation
+  const mockValues = {
+    username: 'testuser',
+    firstName: 'John',
+    lastName: 'Doe',
+    email: 'johndoe@example.com',
+    password: 'password123',
+    confirmPassword: 'password123',
+  };
+
+  // State for form fields
+  const [formData, setFormData] = useState({
+    username: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
+
+  // Handle input change
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Check if the form data matches mock values
+    if (
+      formData.username === mockValues.username &&
+      formData.firstName === mockValues.firstName &&
+      formData.lastName === mockValues.lastName &&
+      formData.email === mockValues.email &&
+      formData.password === mockValues.password &&
+      formData.confirmPassword === mockValues.confirmPassword
+    ) {
+      // Navigate to the /Intro page
+      router.push('/Intro');
+    } else {
+      alert('Please check your input values.');
+    }
+  };
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       {/* Logo Section */}
@@ -29,7 +85,7 @@ export default function Home() {
       </div>
 
       {/* Form Section */}
-      <form className="w-full max-w-2xl p-8 rounded-lg bg-opacity-0 bg-transparent">
+      <form className="w-full max-w-2xl p-8 rounded-lg bg-opacity-0 bg-transparent" onSubmit={handleSubmit}>
         <p
           className="text-1xl font-semibold mb-9 text-center"
           style={{ color: "rgba(255, 255, 255, 0.57)" }}
@@ -49,6 +105,8 @@ export default function Home() {
             <input
               type="text"
               id="username"
+              value={formData.username}
+              onChange={handleChange}
               className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
@@ -64,6 +122,8 @@ export default function Home() {
             <input
               type="text"
               id="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
               className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
@@ -79,6 +139,8 @@ export default function Home() {
             <input
               type="text"
               id="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
               className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
@@ -94,6 +156,8 @@ export default function Home() {
             <input
               type="email"
               id="email"
+              value={formData.email}
+              onChange={handleChange}
               className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
@@ -109,6 +173,8 @@ export default function Home() {
             <input
               type="password"
               id="password"
+              value={formData.password}
+              onChange={handleChange}
               className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
@@ -124,6 +190,8 @@ export default function Home() {
             <input
               type="password"
               id="confirmPassword"
+              value={formData.confirmPassword}
+              onChange={handleChange}
               className="appearance-none bg-transparent border-b border-white w-full py-1 leading-tight focus:outline-none"
             />
           </div>
