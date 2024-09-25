@@ -3,18 +3,22 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'; 
 
+export const mockValues = {
+  name: "John Doe",
+  username: "johndoe123",
+  website: "www.johndoe.com",
+  affiliateId: "AFF12345",
+  schedulerId: "SCH45678",
+  leader: "Team Lead",
+  avatar: "https://example.com/avatar.jpg",
+  bio: "Lorem ipsum dolor sit amet.",
+};
+
 export default function Home() {
   const router = useRouter();
 
 
-  const mockValues = {
-    username: 'testuser',
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'johndoe@example.com',
-    password: 'password123',
-    confirmPassword: 'password123',
-  };
+
 
   // State for form fields
   const [formData, setFormData] = useState({
