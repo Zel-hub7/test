@@ -1,12 +1,12 @@
-"use client"; // Marking the component as a Client Component
+"use client"; 
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'; // Updated import for the router
+import { useRouter } from 'next/navigation'; 
 
 export default function Home() {
   const router = useRouter();
 
-  // Define mock values for validation
+
   const mockValues = {
     username: 'testuser',
     firstName: 'John',
