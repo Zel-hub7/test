@@ -35,15 +35,12 @@ export default function Step2() {
         your call
       </p>
 
-      {/* Navigation Link */}
-      <a href="/" className="text-blue-200 underline hover:text-blue-300">
-        Go back to Home Page
-      </a>
       <div className="w-full flex max-w-4xl justify-between mt-4 px-4">
+        <Link href="/Intro">
         <button className="bg-gradient-to-r from-blue-500 to-gray-900 text-white font-bold py-2 px-4 rounded-full hover:scale-105 transform transition-all">
           &lt; Back
         </button>
-
+        </Link>
       <Link href = "/booking">
         <button className="bg-gradient-to-r from-blue-500 to-gray-900 text-white font-bold py-2 px-4 rounded-full hover:scale-105 transform transition-all flex items-center space-x-1">
           Book your Call{" "}

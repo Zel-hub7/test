@@ -1,63 +1,66 @@
-"use client"; // Add this line to mark the component as a Client Component
+// app/booking/page.js
+"use client";
 
-import { useState } from "react";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faClock,
+  faCalendarAlt,
+  faGlobe,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
+import Navbar from "../components/Navbar";
 
-export default function BookingPage() {
-  const [email, setEmail] = useState("");
-  const [timezone, setTimezone] = useState("");
-  const [startTime, setStartTime] = useState("");
-  const [endTime, setEndTime] = useState("");
-
-  const handleBooking = async () => {
-    const response = await fetch("https://cribcrm.com/api/v1/bookings", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer your_token_here", // Add your authorization token here
-      },
-      body: JSON.stringify({
-        timezone,
-        email,
-        start_time: startTime,
-        end_time: endTime,
-      }),
-    });
-
-    if (response.ok) {
-      // Handle success (e.g., show a success message)
-      console.log("Booking successful!");
-    } else {
-      // Handle error (e.g., show an error message)
-      console.error("Booking failed:", response.statusText);
-    }
-  };
-
+const BookingPage = () => {
   return (
-    <div>
-      <h1>Book a Call</h1>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
+    <div className="flex flex-col items-center  min-h-screen p-4">
+      {/* Logo at the top */}
+      <img
+        src="https://rippleeffectfree.com/wp-content/uploads/2024/04/logo-bg-remove-extra.png"
+        alt="Logo"
+        className="w-24 h-auto mb-10"
       />
-      <input
-        type="text"
-        value={timezone}
-        onChange={(e) => setTimezone(e.target.value)}
-        placeholder="Enter your timezone"
-      />
-      <input
-        type="datetime-local"
-        value={startTime}
-        onChange={(e) => setStartTime(e.target.value)}
-      />
-      <input
-        type="datetime-local"
-        value={endTime}
-        onChange={(e) => setEndTime(e.target.value)}
-      />
-      <button onClick={handleBooking}>Book Now</button>
+
+      {/* Outer Box */}
+      <div className="bg-[#2C7A7B] p-8 rounded-lg shadow-lg mt-12 w-full max-w-md">
+        <img
+          src="https://rippleeffectfree.com/wp-content/uploads/2024/04/logo-bg-remove-extra.png"
+          alt="Logo"
+          className="w-24 h-auto mb-4"
+        />
+
+        <h2 className="text-white text-3xl mb-8">Business Plan Call</h2>
+        {/* Small Inner Box */}
+        <div className="border border-white border-opacity-50 p-6 rounded-md">
+          {/* Clock Icon and Text */}
+          <div className="flex items-center mb-4">
+            <FontAwesomeIcon icon={faClock} className="text-white mr-2" />
+            <span className="text-white">12:30 PM</span>
+          </div>
+
+          {/* Calendar Icon and Date */}
+          <div className="flex items-center mb-4">
+            <FontAwesomeIcon icon={faCalendarAlt} className="text-white mr-2" />
+            <span className="text-white">September 26, 2024</span>
+          </div>
+
+          {/* Earth Icon and GMT */}
+          <div className="flex items-center mb-4">
+            <FontAwesomeIcon icon={faGlobe} className="text-white mr-2" />
+            <span className="text-white">GMT+3</span>
+          </div>
+
+          {/* Hamburger Icon and Random Text */}
+          <div className="flex items-center">
+            <FontAwesomeIcon icon={faBars} className="text-white mr-2" />
+            <span className="text-white">
+              Schedule a time that works best for you
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default BookingPage;
