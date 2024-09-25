@@ -18,11 +18,11 @@ export default function TrainingPage() {
           alt="Logo"
           className="w-24 h-auto mx-auto mb-5"
         />
-        <h2 className="text-white text-3xl font-semibold">Trainings</h2>
+        <h2 className="text-white text-3xl font-semibold">Step 1</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl w-full mt-12 mx-auto">
         {/* Card 1 */}
-        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between items-center">
+        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between items-center transform transition-transform duration-300 hover:scale-105">
           <img
             src="https://github.com/Zel-hub7/music_player/blob/master/Thumbnail.PNG?raw=true"
             alt="Training Image"
@@ -59,7 +59,7 @@ export default function TrainingPage() {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between items-center">
+        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between items-center transform transition-transform duration-300 hover:scale-105">
           <img
             src="https://github.com/Zel-hub7/music_player/blob/master/Thumbnail.PNG?raw=true"
             alt="Training Image"
@@ -96,7 +96,7 @@ export default function TrainingPage() {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between items-center">
+        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between items-center transform transition-transform duration-300 hover:scale-105">
           <img
             src="https://github.com/Zel-hub7/music_player/blob/master/Thumbnail.PNG?raw=true"
             alt="Training Image"
