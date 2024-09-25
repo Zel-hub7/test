@@ -1,7 +1,8 @@
 // app/leaderboard/page.js
-"use client"; 
+"use client";
 
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const LeaderboardPage = () => {
   // Sample data for leaderboard scores
@@ -13,23 +14,26 @@ const LeaderboardPage = () => {
 
   const renderTable = (title) => (
     <div className="bg-opacity-10 rounded-lg shadow-lg overflow-hidden w-full max-w-xs">
-      <h2 className="bg-[#2A4365] text-white text-lg font-semibold text-center p-4">{title}</h2>
       <table className="min-w-full">
         <thead>
-          <tr>
-            <th className="px-4 py-2 text-left">Rank</th>
+          <tr className="bg-[#2A4365] text-white">
+            <th className="px-4 py-2 text-left">#</th>
             <th className="px-4 py-2 text-left">Name</th>
             <th className="px-4 py-2 text-left">Score</th>
-            <th className="px-4 py-2 text-left"></th>
           </tr>
         </thead>
         <tbody>
           {scores.map((score) => (
             <tr key={score.rank} className="bg-transparent">
-              <td className="border-t border-white px-4 py-2">{score.rank}</td>
-              <td className="border-t border-white px-4 py-2">{score.name}</td>
-              <td className="border-t border-white px-4 py-2">{score.score}</td>
-
+              <td className="border-t border-white px-4 py-2 text-white">
+                {score.rank}
+              </td>
+              <td className="border-t border-white px-4 py-2 text-white">
+                {score.name}
+              </td>
+              <td className="border-t border-white px-4 py-2 text-white">
+                {score.score}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -38,13 +42,25 @@ const LeaderboardPage = () => {
   );
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-3xl font-bold mb-6 text-[#2A4365]">Leaderboard</h1>
+    <div className="flex flex-col items-center justify-start min-h-screen p-4">
+      <div className="flex items-center justify-center w-full py-4">
+        {/* Logo in the center top */}
+        <img
+          src="https://rippleeffectfree.com/wp-content/uploads/2024/04/logo-bg-remove-extra.png"
+          alt="Logo"
+          className="w-24 h-auto mr-4"
+        />
+        {/* Navbar next to the logo */}
+        <Navbar />
+      </div>
+      
+      <h1 className="text-3xl font-bold mb-6 text-white">Leaderboard</h1>
+      
       <div className="flex space-x-6">
-        {renderTable("Table 1")}
-        {renderTable("Table 2")}
-        {renderTable("Table 3")}
-        {renderTable("Table 4")}
+        {renderTable("Today")}
+        {renderTable("Last 7 Days")}
+        {renderTable("Last 30 Days")}
+        {renderTable("All Time")}
       </div>
     </div>
   );
