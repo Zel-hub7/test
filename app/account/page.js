@@ -10,13 +10,26 @@ import {
   faCalendarCheck,
   faStar,
   faImage,
-  faPen
+  faPen,
 } from "@fortawesome/free-solid-svg-icons";
 import { mockValues } from "../page"; // Adjust the import path if needed
+import Navbar from "../components/Navbar";
 
 export default function AccountPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
+        <Navbar />
+      <div className="mb-4 mt-7 text-center">
+        <img
+          src="https://rippleeffectfree.com/wp-content/uploads/2024/04/logo-bg-remove-extra.png"
+          alt="Logo"
+          className="w-24 h-auto mx-auto mb-2"
+        />
+        <h2 className="text-white mb-5 text-3xl font-semibold">
+          Account
+        </h2>
+
+      </div>
       <div className="bg-white border border-white bg-opacity-10 p-8 rounded-lg shadow-lg w-full max-w-4xl">
         <div className="grid grid-cols-3 gap-8 mb-8">
           {/* Icons for the first row */}
