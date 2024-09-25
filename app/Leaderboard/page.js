@@ -16,7 +16,7 @@ const LeaderboardPage = () => {
     <div className="bg-opacity-10 rounded-lg shadow-lg overflow-hidden w-full max-w-xs">
       <table className="min-w-full">
         <thead>
-          <tr className="bg-[#2A4365] text-white">
+          <tr className="bg-[#2B6CB0] text-white">
             <th className="px-4 py-2 text-left">#</th>
             <th className="px-4 py-2 text-left">Name</th>
             <th className="px-4 py-2 text-left">Score</th>
