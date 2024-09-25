@@ -1,24 +1,26 @@
 // app/account.js
 "use client"; 
 
+import { useState } from "react"; // Import useState
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
   faUserCircle,
   faGlobe,
   faIdCard,
-  faEdit,
-  faInfoCircle,
   faCalendarCheck,
   faStar,
   faImage,
   faPen,
+  faInfoCircle,
+  faEdit,
 } from "@fortawesome/free-solid-svg-icons";
 import { mockValues } from "../page"; 
 import Navbar from "../components/Navbar";
 
-
 export default function AccountPage() {
+  const [activeTab, setActiveTab] = useState(null); // State to track the active tab
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <Navbar />
@@ -35,10 +37,24 @@ export default function AccountPage() {
 
       {/* Text Information Above the Box */}
       <div className="mb-4 flex items-center text-left w-full max-w-4xl">
-        <h3 className="text-xl font-bold text-white mr-2">Information</h3>
-        <FontAwesomeIcon icon={faInfoCircle} className="text-white mr-4" />
-        <h3 className="text-xl font-bold text-white mr-2">Edit</h3>
-        <FontAwesomeIcon icon={faEdit} className="text-white" />
+        <div
+          onClick={() => setActiveTab("information")} // Set active tab on click
+          className={`flex items-center cursor-pointer p-2 rounded-lg ${
+            activeTab === "information" ? "bg-white" : ""
+          }`}
+        >
+          <h3 className="text-xl font-bold text-black mr-2">Information</h3>
+          <FontAwesomeIcon icon={faInfoCircle} className="text-black" />
+        </div>
+        <div
+          onClick={() => setActiveTab("edit")} // Set active tab on click
+          className={`flex items-center cursor-pointer p-2 rounded-lg ${
+            activeTab === "edit" ? "bg-white" : ""
+          }`}
+        >
+          <h3 className="text-xl font-bold text-black mr-2">Edit</h3>
+          <FontAwesomeIcon icon={faEdit} className="text-black" />
+        </div>
       </div>
 
       <div className="bg-white border border-white bg-opacity-10 p-8 rounded-lg shadow-lg w-full max-w-4xl">
