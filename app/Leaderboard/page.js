@@ -44,13 +44,13 @@ const LeaderboardPage = () => {
   return (
     <div className="flex flex-col items-center justify-start min-h-screen p-4">
       <div className="flex items-center justify-center w-full py-4">
-        {/* Logo in the center top */}
+     
         <img
           src="https://rippleeffectfree.com/wp-content/uploads/2024/04/logo-bg-remove-extra.png"
           alt="Logo"
           className="w-24 h-auto mr-4"
         />
-        {/* Navbar next to the logo */}
+   
         <Navbar />
       </div>
       
